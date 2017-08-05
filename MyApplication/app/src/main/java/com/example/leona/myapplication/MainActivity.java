@@ -3,6 +3,7 @@ package com.example.leona.myapplication;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         // Spinner Drop down elements
         //Gender Options
         List<String> sex = new ArrayList<String>();
+        sex.add("Choose your Gender");
         sex.add("M");
         sex.add("F");
         //height by feet options 8
@@ -119,10 +121,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this,"Lets Get Started",Toast.LENGTH_LONG).show();
-                // second activity will be
-//                Intent intentMain = new Intent(MainActivity.this ,
-//                        main2.class);
-//                MainActivity.this.startActivity(intentMain);
+                // second activity will be open through here also find a way to save user info to be displayed
+//                FragmentManager fm = getSupportFragmentManager();
+//
+//                UpdateToDoFragment frag = UpdateToDoFragment.newInstance(year, month, day, description, category, id);
+//                frag.show(fm, "updatetodofragment");
+
+//                Intent myIntent = new Intent(v.getContext(), main2.class);
+//                startActivityForResult(myIntent, 0);
+//
+//
 //                Log.i("Content "," Main layout ");
 
             }
